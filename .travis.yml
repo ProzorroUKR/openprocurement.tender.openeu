@@ -26,6 +26,6 @@ install:
   - bin/develop up --force
 script:
   - bin/py.test ./openprocurement/tender/openeu/tests/ --cov=openprocurement.tender.openeu
-  - bin/pylint --errors-only --disable=no-member,not-an-iterable,bad-super-call,unsubscriptable-object,too-many-format-args openprocurement.tender.openeu
+  - bin/pylint --errors-only --disable=no-member,not-an-iterable,bad-super-call,unsubscriptable-object,too-many-format-args,function-redefined,unsupported-membership-test openprocurement.tender.openeu
 after_success:
   - bin/coveralls
